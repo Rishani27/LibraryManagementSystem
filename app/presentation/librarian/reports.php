@@ -1,8 +1,5 @@
 <?php
-// ============================================================
-// ULMS — Reports  (FR-11 — Member 5)
-// presentation/librarian/reports.php
-// ============================================================
+// presentation/librarian/reports.ph
 
 define('ROOT_URL', '../../..');
 require_once ROOT_URL . '/app/config/config.php';
