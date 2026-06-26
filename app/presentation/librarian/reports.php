@@ -1,5 +1,5 @@
 <?php
-// presentation/librarian/reports.ph
+// presentation/librarian/reports.php
 
 define('ROOT_URL', '../../..');
 require_once ROOT_URL . '/app/config/config.php';
