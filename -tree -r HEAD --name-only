@@ -1,0 +1,8 @@
+[33mcommit 64450d55ddf4e71f67262051946c4b775f0dd7ce[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mm5-logs-reports[m[33m, [m[1;31morigin/m5-logs-reports[m[33m)[m
+Author: Rishani27 <rishanipradeepa05@gmail.com>
+Date:   Sun Jul 5 00:42:17 2026 +0530
+
+    Small UI improvements
+
+app/business/services/ReportService.php
+app/data/models/ActivityLog.php
