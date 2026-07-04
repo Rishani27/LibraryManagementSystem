@@ -1,8 +1,7 @@
 <?php
-// ============================================================
 // ULMS — ActivityLog Model (DTO)
 // Data Layer: data/models/ActivityLog.php
-// ============================================================
+
 
 class ActivityLog {
     public int    $id          = 0;

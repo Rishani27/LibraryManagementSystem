@@ -1,8 +1,7 @@
 <?php
-// ============================================================
-// ULMS — Report Service  (FR-11 — Member 5)
+
 // Business Layer: business/services/ReportService.php
-// ============================================================
+
 
 require_once __DIR__ . '/../../data/repositories/LoanRepository.php';
 require_once __DIR__ . '/../../data/repositories/FineRepository.php';
