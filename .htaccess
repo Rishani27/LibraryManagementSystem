@@ -1,0 +1,24 @@
+# ULMS — Root .htaccess
+# Block direct browser access to sensitive folders only
+
+Options -Indexes
+
+# NOTE: app/presentation/ pages are served directly by Apache.
+# We only block raw source/config directories here.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block direct access to database/ and docs/ folders
+    RewriteRule ^database/ - [F,L]
+    RewriteRule ^docs/ - [F,L]
+
+    # Block direct access to config and core PHP files
+    RewriteRule ^app/config/ - [F,L]
+    RewriteRule ^app/core/ - [F,L]
+    RewriteRule ^app/business/ - [F,L]
+    RewriteRule ^app/data/ - [F,L]
+    RewriteRule ^app/logs/ - [F,L]
+    RewriteRule ^app/includes/ - [F,L]
+    # Allow app/presentation/ — these ARE the pages served to users
+</IfModule>

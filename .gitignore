@@ -1,0 +1,70 @@
+# ============================================================
+# ULMS — .gitignore
+# ============================================================
+
+# ── 1. CONFIG WITH REAL CREDENTIALS ─────────────────────────
+# NEVER commit real DB passwords, API keys, or secrets.
+# Commit only config.example.php (a template with placeholders).
+app/config/config.php
+
+# ── 2. SETUP / SEED SCRIPTS ─────────────────────────────────
+# These contain default passwords and truncate your database.
+setup.php
+seed.php
+
+# ── 3. ENVIRONMENT & SECRET FILES ───────────────────────────
+.env
+.env.local
+.env.production
+*.key
+*.pem
+*.p12
+
+# ── 4. LOGS & RUNTIME DATA ──────────────────────────────────
+app/logs/*.log
+app/logs/*.txt
+*.log
+
+# ── 5. UPLOADED USER FILES ──────────────────────────────────
+# If the project had file uploads (e.g. profile pictures)
+public/uploads/
+storage/
+
+# ── 6. DEPENDENCY DIRECTORIES ───────────────────────────────
+# If you add Composer later:
+vendor/
+# If you add npm/Node later:
+node_modules/
+
+# ── 7. IDE & EDITOR FILES ───────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── 8. OS GENERATED FILES ───────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ── 9. PHP CACHE & COMPILED FILES ───────────────────────────
+*.cache
+*.tmp
+/tmp/
+
+# ── 10. COMPOSER LOCK (optional — include if using Composer) ─
+# composer.lock  ← comment out to include it (recommended)
+
+# ── 11. DATABASE DUMPS WITH REAL DATA ───────────────────────
+# The schema.sql (structure only) IS safe to commit.
+# But never commit dumps with real student/user data.
+database/dump_*.sql
+database/*_backup.sql
+*.sql.gz

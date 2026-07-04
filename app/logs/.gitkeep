@@ -1,0 +1,3 @@
+# Logs directory — application runtime logs placeholder
+# This directory is intentionally kept for future log file support.
+# .htaccess blocks direct web access to this folder.
