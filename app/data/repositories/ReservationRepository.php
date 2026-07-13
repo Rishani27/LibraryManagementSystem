@@ -1,4 +1,3 @@
-
 <?php
 // ============================================================
 // ULMS — Reservation Repository
@@ -19,6 +18,7 @@ class ReservationRepository {
     private const JOIN_SQL =
         'SELECT r.*,
                 b.title     AS book_title,
+                b.author    AS book_author,
                 s.full_name AS student_name,
                 s.username  AS student_username
          FROM reservations r
@@ -79,12 +79,11 @@ class ReservationRepository {
         return (int)Database::getInstance()->lastInsertId();
     }
 
-    public function updateStatus(int $id, string $status): bool {
-        $fulfilledAt = $status === 'fulfilled' ? date('Y-m-d H:i:s') : null;
+    public function updateStatus(int $id, string $status, ?string $dateTime = null): bool {
         $stmt = $this->db->prepare(
             'UPDATE reservations SET status = ?, fulfilled_at = ? WHERE id = ?'
         );
-        return $stmt->execute([$status, $fulfilledAt, $id]);
+        return $stmt->execute([$status, $dateTime, $id]);
     }
 
     public function findByDateRange(string $from, string $to): array {
