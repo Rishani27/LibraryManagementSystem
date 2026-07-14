@@ -32,14 +32,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-$activeLoans = $returnService->getActiveLoans();
 
-$pageTitle  = 'Return Books';
-$activePage = 'return';
-$flash      = Session::getFlash();
 
-include ROOT_URL . '/app/includes/header.php';
-include ROOT_URL . '/app/includes/nav_librarian.php';
+
+
+
+
+
+
+
+    
 ?>
 <div class="main-content">
   <div class="topbar">
