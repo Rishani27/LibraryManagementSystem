@@ -4,18 +4,7 @@
 // presentation/librarian/reservations.php
 // ============================================================
 
-define('ROOT_URL', '../../..');
-require_once ROOT_URL . '/app/config/config.php';
-require_once ROOT_URL . '/app/core/Session.php';
-require_once ROOT_URL . '/app/core/Helper.php';
-require_once ROOT_URL . '/app/core/Database.php';
-require_once ROOT_URL . '/app/data/models/Reservation.php';
-require_once ROOT_URL . '/app/data/repositories/ReservationRepository.php';
-require_once ROOT_URL . '/app/data/repositories/BookRepository.php';
-require_once ROOT_URL . '/app/data/repositories/UserRepository.php';
-require_once ROOT_URL . '/app/data/repositories/LogRepository.php';
-require_once ROOT_URL . '/app/business/services/LogService.php';
-require_once ROOT_URL . '/app/business/services/ReservationService.php';
+
 
 Session::requireLogin('librarian');
 
