@@ -37,16 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-$filter = $_GET['filter'] ?? 'unpaid';
-$fines  = $filter === 'all'
-    ? $fineSvc->getAllFines()
-    : $fineSvc->getUnpaidFines();
 
-$stats = $fineSvc->getDashboardStats();
-
-$pageTitle  = 'Fine Management';
-$activePage = 'fines';
-$flash      = Session::getFlash();
 
 include ROOT_URL . '/app/includes/header.php';
 include ROOT_URL . '/app/includes/nav_librarian.php';
